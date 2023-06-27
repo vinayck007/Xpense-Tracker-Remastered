@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Expense</title>
+  </head>
+  <body>
+    <h1>Add Expense</h1>
+    <form id="expense-details">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required><br><br>
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="description" required><br><br>
+      <label for="category">Category:</label>
+      <select id="category" name="category" required>
+        <option value="">-- Select Category --</option>
+        <option value="food">Food</option>
+        <option value="fuel">Fuel</option>
+        <option value="travel">Travel</option>
+        <option value="entertainment">Entertainment</option>
+      </select><br><br>
+      <button type="submit" value="Add Expense" id="submit">Add Expense</button>
+    </form>
+    <br>
+    <button type="submit" id="razor-pay-btn">Get Premium</button>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <p id="premium-text" style="display: none;">You are a premium user</p>
+    <div id="leaderboard-container">
+      <button id="leaderboard-btn" style="display:none;">Leaderboard</button><br>
+      <ul id="leaderboard" >
+        <!-- leaderboard list items will be dynamically added here -->
+      </ul><br>
+    </div>
+    <h1>Expense List</h1>
+    <ul id="expense-list"></ul>
+    <br>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="expense.js"></script>
+</html>
